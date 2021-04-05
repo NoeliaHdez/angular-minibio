@@ -1,4 +1,6 @@
 @import "../styles";
+@media screen and (max-width: 480px) {}
+
 .main-container {
     background-color: rgb(241, 234, 220);
     width: 100%;
@@ -19,7 +21,7 @@
     display: block;
     margin-top: 20px;
     margin: 0 auto;
-    width: 190px;
+    width: 175px;
     height: auto;
     border-radius: 100%;
     border: 2px solid black;
@@ -49,6 +51,20 @@
         margin: 20px;
         display: flex;
         text-decoration: none;
+        &:hover {
+            transition: all 2s linear;
+            opacity: 0.5;
+            background-color: rgb(245, 193, 7);
+            .left-item {
+                transition: all 2s linear;
+                color: rgb(0, 0, 0);
+                font-size: 230%;
+            }
+            .right-item {
+                transition: all 2s linear;
+                color: rgb(0, 0, 0);
+            }
+        }
     }
     .right-item {
         font-size: larger;
@@ -65,10 +81,22 @@
 }
 
 .btn-change {
-    height: 40px;
+    height: 30px;
     position: fixed;
     top: 20px;
     right: 20px;
+    border-radius: 100%;
+    box-shadow: 2px 3px 14px 2px rgb(228, 224, 33);
+    .fa-icon {
+        color: black;
+    }
+    &:hover {
+        transition: all 2s linear;
+        opacity: 0.6;
+        .fa-icon {
+            color: rgb(238, 195, 53);
+        }
+    }
 }
 
 .main-container.dark {
@@ -86,8 +114,16 @@
         color: rgb(235, 222, 205);
     }
     .link-box {
-        background-color: rgb(92, 87, 87);
-        box-shadow: 1px 3px 10px 0px #69542d;
+        background-color: rgb(218, 204, 204);
+        box-shadow: 1px 3px 10px 0px #c9a86b;
+        &:hover {
+            transition: all 2s linear;
+            opacity: 0.6;
+            .left-item {
+                color: orange;
+                font-size: 260%;
+            }
+        }
     }
     .left-item {
         color: rgb(5, 5, 5);

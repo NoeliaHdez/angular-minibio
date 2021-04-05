@@ -1,11 +1,13 @@
+import { NgLocaleLocalization } from '@angular/common';
 import { Component } from '@angular/core';
+import { NoPreloading } from '@angular/router';
 import {
   faBlogger,
   faGithub,
-  faInstagram,
   faLinkedin,
+  faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +23,7 @@ export class AppComponent {
   isGithub = faGithub;
   isLinkedin = faLinkedin;
   isBlog = faBlogger;
-  isInstagram = faInstagram;
+  isGmail = faEnvelope;
 
   socialNetwork = [
     {
@@ -41,9 +43,9 @@ export class AppComponent {
         'https://www.linkedin.com/in/noelia-hern%C3%A1ndez-jim%C3%A9nez-99548920a/',
     },
     {
-      img: this.isInstagram,
-      text: 'Instagram',
-      link: 'https://www.instagram.com/accounts/login/',
+      img: this.isGmail,
+      text: 'Gmail',
+      link: 'noelia.hdezjimenez@gmail.com',
     },
   ];
 
