@@ -4,13 +4,13 @@
             <div>
                 <img class="foto" src="assets/images/imagen_minibio.jpeg" alt="Noelia Hernández" />
             </div>
-            <h1 class="h1">Noelia Hernández</h1>
-            <p class="p">
+            <h1>Noelia Hernández</h1>
+            <p>
                 Full Stack Developer en proceso...
                 <br /> Aquí puedes encontrarme ⬇️
             </p>
             <div class="socialBox">
-                <a href="{{ social.link }}" *ngFor="let social of socialNetwork" target="_blank" class="link-box">
+                <a href="{{ social.link }}" target="_blank" *ngFor="let social of socialNetwork" class="link-box">
                     <div class="left-item">
                         <!-- <p>{{ social.img }}</p> -->
                         <fa-icon [icon]="social.img"></fa-icon>
@@ -24,6 +24,6 @@
     </div>
 
     <button class="btn-change" type="button" (click)="changeMode()">
-    <fa-icon class="fa-icon" [icon]="btnNightMode"></fa-icon>
+    <fa-icon [icon]="btnNightMode"></fa-icon>
   </button>
 </div>
